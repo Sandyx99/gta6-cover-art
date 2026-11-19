@@ -1,0 +1,26 @@
+[
+  {
+    "h": 720,
+    "name": "1-cover.jpg",
+    "query": "?shot=cover&layout=hero3&grade=vice&size=1920x1080&title=VICE%20COAST&subtitle=the%20sun%20never%20sets&photos=pier,boulevard&assign=1,0,1,0&zoom=1.15&oy=0.85",
+    "w": 1280
+  },
+  {
+    "h": 720,
+    "name": "2-editor.jpg",
+    "query": "?shot=editor&layout=hero3&grade=vice&size=1080x1080&title=VICE%20COAST&subtitle=the%20sun%20never%20sets&photos=boulevard,pier&assign=0,1,0,1",
+    "w": 1280
+  },
+  {
+    "h": 1280,
+    "name": "3-cover.jpg",
+    "query": "?shot=cover&layout=nine&grade=neon&size=1080x1350&title=NEON%20NIGHTS&subtitle=downtown%20after%20dark&photos=pier,boulevard&assign=0,1,0,1,0,1,0,1,0",
+    "w": 1024
+  },
+  {
+    "h": 1080,
+    "name": "4-cover.jpg",
+    "query": "?shot=cover&layout=tilted&grade=golden&size=1080x1080&title=GOLDEN%20HOUR&subtitle=pier%20pressure&photos=boulevard,pier&assign=0,1,0&zoom=0.85",
+    "w": 1080
+  }
+]
