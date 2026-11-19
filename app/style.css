@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pacifico';
+  src: url('./fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: #14101d; color: #f2eef8; font: 15px/1.45 system-ui, sans-serif; }
+body { display: flex; flex-direction: column; }
+
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 22px;
+  background: linear-gradient(90deg, #2a0a3d, #5b1040 55%, #0d2b45);
+  border-bottom: 3px solid #ff2e88;
+}
+.brand h1 {
+  margin: 0; font-family: 'Anton', sans-serif; font-weight: 400;
+  font-size: 30px; letter-spacing: 1px; text-transform: uppercase;
+  background: linear-gradient(90deg, #fff7d6, #ffd166 40%, #ff5e7a 75%, #c44dff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.brand p { margin: 2px 0 0; color: #d8cfe8; font-size: 13px; }
+.top-actions { display: flex; gap: 10px; }
+
+.app { display: flex; gap: 22px; padding: 18px 22px 26px; align-items: flex-start; }
+.controls { width: 330px; flex: none; display: flex; flex-direction: column; gap: 14px; }
+.group {
+  background: #1e1830; border: 1px solid #3a2a55; border-radius: 12px;
+  padding: 13px 14px; display: flex; flex-direction: column; gap: 9px;
+}
+.group h2 { margin: 0; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #ffb3c6; }
+.hint { margin: 0; color: #a99dc2; font-size: 12.5px; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 13.5px; }
+input[type=text] {
+  font: inherit; padding: 9px 10px; border: 1px solid #4a3a6b; border-radius: 8px;
+  background: #120d20; color: #fff;
+}
+input[type=text]:focus { outline: 2px solid #ff2e88; outline-offset: 1px; }
+.upload {
+  display: block; text-align: center; padding: 12px; border: 2px dashed #7b5ea7;
+  border-radius: 10px; cursor: pointer; background: #241a3d;
+}
+.upload:hover { border-color: #ff2e88; }
+.upload input { display: none; }
+.tray { display: flex; flex-wrap: wrap; gap: 8px; }
+.tray:empty { display: none; }
+.thumb {
+  padding: 0; border: 2px solid transparent; border-radius: 8px; overflow: hidden;
+  cursor: pointer; background: none; width: 72px; height: 72px;
+}
+.thumb:hover, .thumb:focus-visible { border-color: #00e5ff; outline: none; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.choices { display: flex; flex-wrap: wrap; gap: 7px; }
+button {
+  font: inherit; font-weight: 700; padding: 9px 12px; border: 1px solid #4a3a6b;
+  border-radius: 8px; background: #2a2144; color: #f2eef8; cursor: pointer;
+}
+button:hover { border-color: #ff2e88; }
+button.active { background: #ff2e88; border-color: #ff2e88; color: #fff; }
+button.primary { background: linear-gradient(90deg, #ff2e88, #ff7a3c); border: 0; color: #fff; }
+button.primary:hover { filter: brightness(1.1); }
+.slider-row { display: flex; align-items: center; gap: 10px; }
+.slider-row input[type=range] { flex: 1; accent-color: #ff2e88; }
+#zoomValue { min-width: 44px; text-align: right; color: #ffd166; }
+#status { margin: 0; min-height: 1.2em; color: #80ed99; font-size: 13px; }
+#panelInfo { color: #7df9ff; }
+
+.preview { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.preview canvas {
+  width: min(100%, calc(100vh - 190px));
+  height: auto; max-height: calc(100vh - 190px);
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.55); border-radius: 6px;
+  cursor: grab; touch-action: none; background: #f6f1e7;
+}
+.preview canvas:active { cursor: grabbing; }
+
+body.shot-cover { background: #000; }
+body.shot-cover .topbar, body.shot-cover .controls, body.shot-cover .preview .hint { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover .preview { width: 100vw; height: 100vh; }
+body.shot-cover canvas { width: 100vw; height: 100vh; max-height: none; box-shadow: none; border-radius: 0; }
